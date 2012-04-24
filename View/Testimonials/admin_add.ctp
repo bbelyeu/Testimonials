@@ -1,7 +1,7 @@
 <div class="testimonials form">
 <?php echo $this->Form->create('Testimonial');?>
 	<fieldset>
-		<legend><?php echo __('Admin Add Testimonial'); ?></legend>
+		<legend><?php echo __('Add Testimonial'); ?></legend>
 	<?php
 		echo $this->Form->input('copy');
 		echo $this->Form->input('author');
@@ -13,7 +13,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-
-		<li><?php echo $this->Html->link(__('List Testimonials'), array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link(__('List Testimonials'), '/admin/testimonials');?></li>
 	</ul>
 </div>

@@ -20,9 +20,9 @@
 		<td><?php echo h($testimonial['Testimonial']['created']); ?>&nbsp;</td>
 		<td><?php echo h($testimonial['Testimonial']['modified']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $testimonial['Testimonial']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $testimonial['Testimonial']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $testimonial['Testimonial']['id']), null, __('Are you sure you want to delete # %s?', $testimonial['Testimonial']['id'])); ?>
+			<?php echo $this->Html->link(__('View'), '/admin/testimonials/view/'.$testimonial['Testimonial']['id']); ?>
+			<?php echo $this->Html->link(__('Edit'), '/admin/testimonials/edit/'.$testimonial['Testimonial']['id']); ?>
+			<?php echo $this->Form->postLink(__('Delete'), '/admin/testimonials/delete/'.$testimonial['Testimonial']['id'], null, __('Are you sure you want to delete # %s?', $testimonial['Testimonial']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -45,6 +45,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Testimonial'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New Testimonial'), '/admin/testimonials/add'); ?></li>
 	</ul>
 </div>

@@ -36,9 +36,9 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Testimonial'), array('action' => 'edit', $testimonial['Testimonial']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Testimonial'), array('action' => 'delete', $testimonial['Testimonial']['id']), null, __('Are you sure you want to delete # %s?', $testimonial['Testimonial']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Testimonials'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Testimonial'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit Testimonial'), '/admin/testimonials/edit/'.$testimonial['Testimonial']['id']); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete Testimonial'), '/admin/testimonials/delete/'.$testimonial['Testimonial']['id'], null, __('Are you sure you want to delete # %s?', $testimonial['Testimonial']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List Testimonials'), '/admin/testimonials'); ?> </li>
+		<li><?php echo $this->Html->link(__('New Testimonial'), '/admin/testimonials/add'); ?> </li>
 	</ul>
 </div>

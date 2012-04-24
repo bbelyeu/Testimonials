@@ -48,4 +48,19 @@ class Testimonial extends TestimonialsAppModel {
 			),
 		),
 	);
+
+    /**
+     * Get a random testimonial
+     *
+     * @return array
+     */
+    public function getRandom()
+    {
+        return $this->find('all', array(
+            'recursive' => 0,
+            'order' => 'rand()',
+            'offset' => 0,
+            'limit' => 1,
+        ));
+    }
 }
