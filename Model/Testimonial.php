@@ -56,11 +56,9 @@ class Testimonial extends TestimonialsAppModel {
      */
     public function getRandom()
     {
-        return $this->find('all', array(
+        return $this->find('first', array(
             'recursive' => 0,
             'order' => 'rand()',
-            'offset' => 0,
-            'limit' => 1,
         ));
     }
 }
